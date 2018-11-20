@@ -20,9 +20,47 @@ namespace SquirrelsInheritance
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Animal> animal = new List<Animal>();
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void tb_Name_GotFocus(object sender, RoutedEventArgs e)
+        {
+            tb_Name.Text = " ";
+        }
+
+        private void tb_Name_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (tb_Name.Text == " ")
+            {
+                tb_Name.Text = "Name";
+            }
+        }
+
+        private void tb_Facts_GotFocus(object sender, RoutedEventArgs e)
+        {
+            tb_Facts.Text = " ";
+        }
+
+        private void tb_Facts_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (tb_Facts.Text == " ")
+            {
+                tb_Facts.Text = "Enter cool fact";
+            }
+        }
+
+        private void bt_Squirrel_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void bt_Chipmunk_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

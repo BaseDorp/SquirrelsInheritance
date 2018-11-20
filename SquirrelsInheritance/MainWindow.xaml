@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SquirrelsInheritance"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Squirrels VS Chipmunks" Height="450" Width="800">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF745911" Offset="1"/>
+            <GradientStop Color="White"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        
+        <Label x:Name="lab_Title" Content="Squirrels are Nuts" FontSize="36" HorizontalAlignment="Center" Width="293" Margin="260,0,239,0" Foreground="Black"/>
+        <TextBox x:Name="tb_Name" Text="Name" TextAlignment="Center" Background="#7FFFFFFF" HorizontalAlignment="Center" Width="200" Margin="308,103,284,269" Height="47" GotFocus="tb_Name_GotFocus" LostFocus="tb_Name_LostFocus"/>
+        <TextBox x:Name="tb_Facts" Text="Enter cool fact" Background="#7FFFFFFF" TextAlignment="Center" HorizontalAlignment="Center" Height="47" Margin="308,155,284,217" Width="200" GotFocus="tb_Facts_GotFocus" LostFocus="tb_Facts_LostFocus"/>
+        <Button x:Name="bt_Squirrel" Content="Add Squirrel" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="39" Margin="308,209,0,0" Click="bt_Squirrel_Click"/>
+        <Button x:Name="bt_Chipmunk" Content="Add Chipmunk" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="39" Margin="308,253,0,0" Click="bt_Chipmunk_Click"/>
+        <Button x:Name="bt_Add" Content="Add more" Visibility="Collapsed" HorizontalAlignment="Left" Margin="349,344,0,0" VerticalAlignment="Top" Width="99" Height="39"/>
+
     </Grid>
 </Window>
